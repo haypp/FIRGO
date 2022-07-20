@@ -32,6 +32,9 @@ public class Add extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (kegiatan.getText().toString().isEmpty() && jumlah.getText().toString().isEmpty()){
+                    Toast.makeText(Add.this, "Harap isi semua Field", Toast.LENGTH_SHORT).show();
+                }else {
                 String nameTXT = kegiatan.getText().toString(); 
                 String jumlahl = jumlah.getText().toString();
                 String notel = note.getText().toString();
@@ -60,6 +63,7 @@ public class Add extends AppCompatActivity {
                 else {
                     Toast.makeText(Add.this, "New Entry Not Inserted", Toast.LENGTH_SHORT).show();
                 }
+            }
             }
         });
     }

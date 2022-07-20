@@ -130,4 +130,9 @@ public class MainActivity extends AppCompatActivity {
         tvout.setText("Rp.  "+String.valueOf(DB.getKeluar()));
         tvutama.setText("Rp. "+Integer.toString(DB.getMasuk()-DB.getKeluar()));
     }
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        MainActivity.this.finish();
+    }
 }
